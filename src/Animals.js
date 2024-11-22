@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from "react";
 const ANIMALS = [
   { name: "Rana", emoji: "🐸", returnLevel: 3000 },
-  { name: "Libélula", emoji: "🐞", returnLevel: 2200 },
+  { name: "Vaquita de San Antonio", emoji: "🐞", returnLevel: 2200 },
   { name: "Pez", emoji: "🐟", returnLevel: 1500 },
   { name: "Pato", emoji: "🦆", returnLevel: 500 },
   { name: "Tortuga", emoji: "🐢", returnLevel: 0 },
+  { name: "Cigarra", emoji: "🦩", returnLevel: 2000 },
+  { name: "Cangrejo", emoji: "🦀", returnLevel: 1800 },
+  { name: "Nutria", emoji: "🦦", returnLevel: 1200 },
+  { name: "Cisne", emoji: "🦢", returnLevel: 300 },
 ];
-
+  
 const BAD_ANIMALS = [
   { name: "Mosquito", emoji: "🦟", appearLevel: 3000 },
   { name: "Rata", emoji: "🐀", appearLevel: 2000 },
   { name: "Serpiente", emoji: "🐍", appearLevel: 500 },
+  { name: "Escorpión", emoji: "🦂", appearLevel: 1800 },
+  { name: "Avispa", emoji: "🐝", appearLevel: 1200 },
+  { name: "Murciélago", emoji: "🦇", appearLevel: 1800 },
+  { name: "Cocodrilo", emoji: "🐊", appearLevel: 4000 },
 ];
 
 

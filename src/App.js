@@ -71,8 +71,8 @@ const App = () => {
         textAlign: "center",
       }}
     >
-      <h1 style={{ fontSize: "5rem" }}>Nivel de Contaminación</h1>
-      <h2 style={{ fontSize: "8rem" }}>{contamination}</h2>
+      <h1 style={{ fontSize: "4rem" }}>Nivel de Contaminación</h1>
+      <h2 style={{ fontSize: "9rem" }}>{contamination}</h2>
 
       <div style={{ display: "flex", gap: "10px", marginTop: "20px" }}>
         {CONFIG.CONTAMINATION_STEPS.map((step) => (
