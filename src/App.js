@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Animals from "./Animals";
+import Ticker from "./Ticker";
 
 const CONFIG = {
   INITIAL_CONTAMINATION: 3000,
@@ -15,6 +16,24 @@ const CONFIG = {
 const App = () => {
   const [contamination, setContamination] = useState(CONFIG.INITIAL_CONTAMINATION);
   const intervalRef = useRef(null);
+
+  const getMessage = () => {
+    if (contamination > 5500) return "Este pantano necesita su ayuda urgente. ¡Empecemos a actuar ya!";
+    if (contamination > 5000) return "La situación es crítica. El pantano está lleno de malaria y plagas.";
+    if (contamination > 4500) return "Secar los pantanos es clave para proteger la salud de los habitantes del ishuv.";
+    if (contamination > 4000) return "El pantano todavía está lleno de peligro.";
+    if (contamination > 3500) return "¡Buen trabajo! Vamos mejorando, pero todavía queda mucho por hacer.";
+    if (contamination > 3000) return "Cada acción cuenta. Sigamos trabajando para darle vida a este lugar.";
+    if (contamination > 2500) return "Estoy seguro de que juntos podemos lograrlo. ¡Un esfuerzo más y los resultados serán enormes!";
+    if (contamination > 2000) return "El pantano comienza a mostrar signos de mejora. ¡Sigamos trabajando por la vida!";
+    if (contamination > 1500) return "¡Excelente! El agua está más clara y menos plagas sobreviven. ¡Vamos!";
+    if (contamination > 1000) return "Cada paso importa. Esto es más que limpiar un pantano, ¡es salvar vidas!";
+    if (contamination > 800) return "Podemos ver el futuro de este lugar más limpio y saludable. ¡Vamos, no aflojemos!";
+    if (contamination > 500) return "El trabajo de Hilel Yaffe fue inspirador. ¡Hoy estás haciendo historia limpiando este lugar!";
+    if (contamination > 200) return "¡Impresionante! El pantano casi está listo para volver a ser un lugar lleno de vida.";
+    return "¡Felicidades! El pantano está limpio. Es un espacio seguro y lleno de naturaleza, gracias a vos.";
+  };
+  
 
   useEffect(() => {
     startContamination();
@@ -71,6 +90,8 @@ const App = () => {
         textAlign: "center",
       }}
     >
+      <Ticker message={getMessage()} />
+
       <h1 style={{ fontSize: "4rem" }}>Nivel de Contaminación</h1>
       <h2 style={{ fontSize: "9rem" }}>{contamination}</h2>
 
@@ -93,7 +114,6 @@ const App = () => {
         ))}
       </div>
 
-      {/* Componente de Animales */}
       <Animals contamination={contamination} />
     </div>
   );
