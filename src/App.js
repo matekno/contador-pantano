@@ -8,8 +8,8 @@ const CONFIG = {
   CONTAMINATION_INTERVAL: 20,
   CONTAMINATION_STEPS: [500, 1000, 1500, 2000],
   COLORS: {
-    CLEAN: [64/255, 224/255, 208/255],      // Turquesa
-    POLLUTED: [101/255, 67/255, 33/255]     // Marrón oscuro
+    CLEAN: [64, 224, 208],      // Turquesa
+    POLLUTED: [101, 67, 33]     // Marrón oscuro
   }
 };
 
